@@ -20,7 +20,15 @@ export default function Layout() {
         lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque
         euismod dui, eu pulvinar nun.
       </p>
-      <button className="button_dark">button 1</button>
+      <button className="button button_dark">button 1</button>
+      <button className="button button_arrow">
+        button 2<span className="arrow"></span>
+      </button>
+      <div>
+        <label></label>
+        <input type="radio" />
+        <label></label>
+      </div>
     </div>
   );
 }
