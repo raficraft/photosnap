@@ -221,6 +221,13 @@ label[data-active="true"] {
     line-height: 2.5rem;
     letter-spacing: 3.33px;
   }
+
+  .nav_link {
+    font-size: 15px;
+    line-height: auto;
+    letter-spacing: 2.5px;
+    text-align: center;
+  }
 }
 
 main {

@@ -11,7 +11,7 @@ export default function BurgerMenu() {
       <BurgerContainer className="burgerMenu" data-isopen={isOpen}>
         <div className="nav_container">
           <Navigation array={nav_header}></Navigation>
-          <Btn type="dark" text="yolo"></Btn>
+          <Btn type="dark" text="get an invite"></Btn>
         </div>
       </BurgerContainer>
       <BurgerIcon

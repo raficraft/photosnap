@@ -19,10 +19,20 @@ export const BurgerContainer = styled.aside`
   .nav_container {
     background-color: white;
     width: 100%;
+    padding: 0 32px 32px 32px;
     ${S.flex("column", "flex-start", "center", "wrap")}
     nav {
       ${S.flex("column", "flex-start", "center", "wrap")}
       z-index: 50;
+      gap: 20px;
+      padding: 32px 0 20px 0;
+      border-bottom: 1px solid var(--grey);
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+
+    .button {
+      width: 100%;
     }
   }
 `;
