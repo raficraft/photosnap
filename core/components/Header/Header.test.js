@@ -2,6 +2,7 @@ import "@testing-library/jest-dom";
 import { render, prettyDOM, waitFor } from "@testing-library/react";
 import { screen } from "@testing-library/dom";
 import Header from "./Header";
+import Navigation from "../Navigation/Navigation";
 
 describe("header component and items is render", () => {
   test(" Header should be rendered", () => {
@@ -16,7 +17,11 @@ describe("header component and items is render", () => {
   });
 
   test(" All Nav item should be rendered", () => {
-    const { getByText } = render(<Header />);
+    const { getByText } = render(
+      <Header>
+        <Navigation></Navigation>
+      </Header>
+    );
 
     expect(getByText(/stories/i)).toBeInTheDocument();
     expect(getByText(/pricing/i)).toBeInTheDocument();
