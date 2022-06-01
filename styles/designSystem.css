@@ -60,6 +60,10 @@ label {
   font-family: var(--font-main);
 }
 
+label[data-active="true"] {
+  color: var(--grey);
+}
+
 .bg_black {
   background-color: black;
 }
@@ -180,11 +184,13 @@ label {
   background-color: black;
   position: absolute;
   top: 0.25rem;
+}
+
+.fake-box[data-ischecked="false"]:before {
   transform: translate(0.25rem);
   transition: 0.6s ease-in-out;
 }
 
-.custom-checkbox input:checked ~ .fake-box:before,
 .fake-box[data-ischecked="true"]:before {
   transform: translate(2.25rem);
   transition: 0.6s ease-in-out;

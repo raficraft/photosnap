@@ -8,8 +8,9 @@ export default function Checkbox() {
       <label
         htmlFor="check"
         onClick={() => {
-          setIsChecked(!isChecked);
+          setIsChecked(false);
         }}
+        data-active={!isChecked}
       >
         Monthly
       </label>
@@ -25,8 +26,9 @@ export default function Checkbox() {
       <label
         htmlFor="check"
         onClick={() => {
-          setIsChecked(!isChecked);
+          setIsChecked(true);
         }}
+        data-active={isChecked}
       >
         Yearly
       </label>
