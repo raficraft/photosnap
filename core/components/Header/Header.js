@@ -12,6 +12,7 @@ export default function Header({ children }) {
           <PhotosnapTitle></PhotosnapTitle>
         </a>
       </Link>
+
       {children}
     </HeaderContainer>
   );

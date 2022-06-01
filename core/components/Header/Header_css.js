@@ -2,13 +2,34 @@ import { S } from "../../styled/function";
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  ${S.flex("row", "space-between", "center")}
-  width : 1440px;
+  ${S.flex("row", "space-between", "center", "wrap")}
+  opacity:1;
+  width: 100%;
   padding: 16px 165px;
+  background-color: white;
+
+  @media screen and (max-width: 1023px) {
+    padding: 16px 65px;
+  }
+  @media screen and (max-width: 800px) {
+    padding: 16px 39px;
+  }
+  @media screen and (max-width: 767px) {
+    ${S.flex("column", "flex-start", "flex-start", "wrap")}
+    padding: 28px 0px;
+    position: relative;
+    border-bottom: 1px solid black;
+    z-index: 100;
+  }
 
   .logo_container {
     ${S.flex("row", "space-between", "center")}
     transition: .5s;
+
+    @media screen and (max-width: 767px) {
+      ${S.flex("row", "flex-start", "flex-start", "no-wrap")}
+      padding: 0px 40px;
+    }
 
     &:hover {
       transition: 0.5s;
@@ -16,7 +37,9 @@ export const HeaderContainer = styled.header`
     }
     svg {
       margin: auto auto;
-      display: block;
+      @media screen and (max-width: 767px) {
+        margin: 0;
+      }
     }
 
     .logo {
