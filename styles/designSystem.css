@@ -5,6 +5,11 @@
 :root {
   --font-main: "DM Sans", sans-serif;
   --grey: rgb(223, 223, 223);
+  --container-width: 1440px;
+
+  @media screen and (max-width: 767px) {
+    --container-width: 100vw;
+  }
 }
 
 h1,
@@ -209,11 +214,21 @@ label[data-active="true"] {
 .section_full--invert {
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   h1,
   h2 {
     font-size: 2rem;
     line-height: 2.5rem;
     letter-spacing: 3.33px;
   }
+}
+
+main {
+  max-width: var(--container-width);
+  width: 100%;
+  background-color: white;
+  flex: 1;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }

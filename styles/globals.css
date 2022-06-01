@@ -8,6 +8,7 @@ body,
     Helvetica Neue, sans-serif;
   min-height: 100%;
   height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -153,13 +154,4 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-main {
-  max-width: 1440px;
-  width: 100%;
-  background-color: white;
-  flex: 1;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
 }
