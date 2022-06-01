@@ -1,12 +1,13 @@
 import "@testing-library/jest-dom";
-import { render, prettyDOM, waitFor } from "@testing-library/react";
-import { screen } from "@testing-library/dom";
+import { render } from "@testing-library/react";
 import Header from "./Header";
 import Navigation from "../Navigation/Navigation";
+import Btn from "../btn/Btn/Btn";
+import { nav_header } from "../../data/nav_header";
 
 describe("header component and items is render", () => {
   test(" Header should be rendered", () => {
-    const { container } = render(<Header />);
+    const { container } = render(<Header></Header>);
     expect(container).toBeInTheDocument();
   });
 
@@ -19,7 +20,7 @@ describe("header component and items is render", () => {
   test(" All Nav item should be rendered", () => {
     const { getByText } = render(
       <Header>
-        <Navigation></Navigation>
+        <Navigation array={nav_header}></Navigation>
       </Header>
     );
 
@@ -29,7 +30,11 @@ describe("header component and items is render", () => {
   });
 
   test(" All Nav item should be rendered", () => {
-    const { getByText } = render(<Header />);
+    const { getByText } = render(
+      <Header>
+        <Btn type="dark_link" text="GET AN INVITE"></Btn>
+      </Header>
+    );
 
     expect(getByText(/get an invite/i)).toBeInTheDocument();
   });

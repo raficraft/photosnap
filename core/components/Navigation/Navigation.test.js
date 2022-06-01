@@ -2,7 +2,7 @@ import "@testing-library/jest-dom";
 import { render, prettyDOM, waitFor } from "@testing-library/react";
 import { screen } from "@testing-library/dom";
 import Navigation from "./Navigation";
-import { nav_header } from "@/data/nav_header";
+import { nav_header } from "../../data/nav_header";
 
 describe("Navigation component and items is render", () => {
   test(" Navigation should be rendered", () => {
