@@ -41,8 +41,8 @@ export const BurgerIcon = styled.span`
   content: " ";
   background-color: red;
   position: absolute;
-  ${S.size("24px")};
-  right: 40px;
+  ${S.size("20px", "16px")};
+  right: 26px;
   top: 28px;
   z-index: 500;
 `;

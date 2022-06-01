@@ -18,7 +18,6 @@ export const HeaderContainer = styled.header`
     ${S.flex("column", "flex-start", "flex-start", "wrap")}
     padding: 28px 0px;
     position: relative;
-    border-bottom: 1px solid black;
     z-index: 100;
   }
 
@@ -28,7 +27,7 @@ export const HeaderContainer = styled.header`
 
     @media screen and (max-width: 767px) {
       ${S.flex("row", "flex-start", "flex-start", "no-wrap")}
-      padding: 0px 40px;
+      padding: 0px 24px;
     }
 
     &:hover {
