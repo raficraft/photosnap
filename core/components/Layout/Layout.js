@@ -1,4 +1,5 @@
 import React from "react";
+import Checkbox from "../btn/Checkbox/Checkbox";
 
 export default function Layout() {
   return (
@@ -8,6 +9,7 @@ export default function Layout() {
       <h3>DM Sans Bold H3</h3>
       <h4>DM Sans Bold H4</h4>
       <h5>DM Sans Bold H5</h5>
+
       <p className="text">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus
         hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet
@@ -20,15 +22,12 @@ export default function Layout() {
         lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque
         euismod dui, eu pulvinar nun.
       </p>
+
       <button className="button button_dark">button 1</button>
       <button className="button button_arrow">
         button 2<span className="arrow"></span>
       </button>
-      <div>
-        <label></label>
-        <input type="radio" />
-        <label></label>
-      </div>
+      <Checkbox></Checkbox>
     </div>
   );
 }

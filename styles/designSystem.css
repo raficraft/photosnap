@@ -52,6 +52,14 @@ h5 {
   color: white;
 }
 
+label {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  font-family: var(--font-main);
+}
+
 .bg_black {
   background-color: black;
 }
@@ -72,9 +80,14 @@ h5 {
 
 .button_dark {
   background-color: black;
-  font-size: 12px;
-  text-transform: uppercase;
   color: white;
+  width: 158px;
+  height: 40px;
+}
+
+.button_light {
+  background-color: withe;
+  color: black;
   width: 158px;
   height: 40px;
 }
@@ -132,4 +145,65 @@ h5 {
   transform: rotate(-45deg);
   top: 0px;
   right: 1px;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.custom-checkbox input {
+  margin: auto 2rem;
+  display: none;
+}
+
+.custom-checkbox label {
+  cursor: pointer;
+}
+
+.fake-box {
+  background-color: var(--grey);
+  content: " ";
+  width: 4rem;
+  height: 2rem;
+  border-radius: 1rem 1rem 1rem 1rem;
+  position: relative;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.fake-box:before {
+  content: " ";
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: 0.25rem;
+  transform: translate(0.25rem);
+  transition: 0.6s ease-in-out;
+}
+
+.custom-checkbox input:checked ~ .fake-box:before,
+.fake-box[data-ischecked="true"]:before {
+  transform: translate(2.25rem);
+  transition: 0.6s ease-in-out;
+}
+
+.section_full {
+}
+.section_full--article {
+}
+.section_full--img {
+}
+.section_full--invert {
+}
+
+@media screen and (max-width: 600px) {
+  h1,
+  h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: 3.33px;
+  }
 }
