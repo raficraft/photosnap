@@ -4,7 +4,7 @@ import { screen } from "@testing-library/dom";
 import Checkbox from "./Checkbox";
 
 describe("check render of the checkbox and its items", () => {
-  test(" the header should be rendered", () => {
+  test(" the checkox container should be rendered", () => {
     const { container } = render(<Checkbox />);
     expect(container).toBeInTheDocument();
   });

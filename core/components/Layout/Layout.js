@@ -1,17 +1,13 @@
 import Link from "next/link";
 import React from "react";
 import Checkbox from "../btn/Checkbox/Checkbox";
+import Header from "../Header/Header";
 
 export default function Layout({ children }) {
   return (
-    <div>
-      <Link href="/design">
-        <a>Design</a>
-      </Link>
-      <Link href="/">
-        <a>Home</a>
-      </Link>
+    <main>
+      <Header></Header>
       {children}
-    </div>
+    </main>
   );
 }

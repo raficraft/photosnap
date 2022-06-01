@@ -23,8 +23,10 @@ export default function DesignSystem() {
         euismod dui, eu pulvinar nun.
       </p>
 
-      <button className="button button_dark">button 1</button>
-      <button className="button button_arrow">
+      <button type="button" className="button button_dark">
+        button 1
+      </button>
+      <button type="button" className="button button_arrow">
         button 2<span className="arrow"></span>
       </button>
       <Checkbox></Checkbox>
