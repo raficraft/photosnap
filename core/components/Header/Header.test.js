@@ -3,9 +3,9 @@ import { render } from "@testing-library/react";
 import Header from "./Header";
 import Navigation from "../Navigation/Navigation";
 import Btn from "../btn/Btn/Btn";
-import { nav_header } from "../../data/nav_header";
+import { nav_header } from "../../data/navigation_data";
 
-describe("header component and items is render", () => {
+describe("header component and items is rendered", () => {
   test(" Header should be rendered", () => {
     const { container } = render(<Header></Header>);
     expect(container).toBeInTheDocument();
@@ -24,12 +24,13 @@ describe("header component and items is render", () => {
       </Header>
     );
 
+    expect(nav_header.length).not.toBeNull();
     expect(getByText(/stories/i)).toBeInTheDocument();
     expect(getByText(/pricing/i)).toBeInTheDocument();
     expect(getByText(/features/i)).toBeInTheDocument();
   });
 
-  test(" All Nav item should be rendered", () => {
+  test(" Item boutton should be rendered", () => {
     const { getByText } = render(
       <Header>
         <Btn type="dark_link" text="GET AN INVITE"></Btn>

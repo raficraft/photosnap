@@ -39,10 +39,37 @@ export const BurgerContainer = styled.aside`
 
 export const BurgerIcon = styled.span`
   content: " ";
-  background-color: red;
   position: absolute;
   ${S.size("20px", "16px")};
   right: 26px;
   top: 28px;
   z-index: 500;
+
+  .burger_item {
+    ${S.emptyAbsolute()}
+    ${S.size("100%", "1px")}
+    background-color: black;
+    transform-origin: center center;
+    transition: 0.8s;
+
+    &--top {
+      top: 4px;
+    }
+    &--bottom {
+      bottom: 4px;
+    }
+  }
+
+  &[data-isopen="true"] {
+    .burger_item {
+      &--top {
+        transition: 0.8s;
+        transform: translateY(4px) rotate(45deg);
+      }
+      &--bottom {
+        transition: 0.8s;
+        transform: translateY(-4px) rotate(-45deg);
+      }
+    }
+  }
 `;
