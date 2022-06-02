@@ -1,5 +1,5 @@
 export const nav_header = [
-  { link: "/", text: "stories" },
-  { link: "/", text: "features" },
-  { link: "/", text: "pricing" },
+  { link: "/stories", text: "stories" },
+  { link: "/features", text: "features" },
+  { link: "/pricing", text: "pricing" },
 ];
