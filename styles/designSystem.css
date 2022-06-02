@@ -60,6 +60,10 @@ h5 {
   color: white;
 }
 
+.grey {
+  color: var(--grey);
+}
+
 label {
   text-transform: uppercase;
   font-weight: bold;
