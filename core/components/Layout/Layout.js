@@ -3,6 +3,7 @@ import { nav_header } from "../../data/navigation_data";
 import useMediaQuery from "../../hooks/useMediaQuery/useMediaQuery";
 import Btn from "../btn/Btn/Btn";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Navigation from "../Navigation/Navigation";
 
@@ -20,6 +21,7 @@ export default function Layout({ children }) {
       </Header>
       {isMobil && <BurgerMenu></BurgerMenu>}
       {children}
+      <Footer></Footer>
     </main>
   );
 }
