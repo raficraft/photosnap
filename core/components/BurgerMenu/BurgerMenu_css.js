@@ -33,6 +33,9 @@ export const BurgerContainer = styled.aside`
 
     .button {
       width: 100%;
+      text-align: center;
+      display: block;
+      font-size: 15px;
     }
   }
 `;

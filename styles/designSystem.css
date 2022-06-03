@@ -88,7 +88,6 @@ label[data-active="true"] {
 
 .button {
   min-height: 40px;
-  max-width: 100%;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
@@ -97,6 +96,8 @@ label[data-active="true"] {
   text-align: center;
   cursor: pointer;
   transition: 0.5s;
+  padding: 0 1.5rem;
+  display: flex;
 }
 
 .button_dark {
@@ -133,8 +134,13 @@ label[data-active="true"] {
 }
 
 .arrow_container {
-  background-color: red;
   position: relative;
+  width: 42px;
+  height: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
 }
 
 .arrow {
@@ -142,9 +148,11 @@ label[data-active="true"] {
   right: -58px;
   top: 50%;
   z-index: 10;
+  height: 1px;
+  content: " ";
+  background-color: black;
 }
 
-.arrow,
 .arrow:before,
 .arrow:after {
   height: 1px;
@@ -163,13 +171,13 @@ label[data-active="true"] {
 }
 
 .arrow:before {
-  top: 0px;
+  top: 6px;
   transform: rotate(45deg);
 }
 
 .arrow:after {
   transform: rotate(-45deg);
-  top: 0px;
+  top: 6px;
   right: 1px;
 }
 
@@ -250,6 +258,7 @@ main {
   flex: 1;
   min-height: 100%;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   position: relative;
 }

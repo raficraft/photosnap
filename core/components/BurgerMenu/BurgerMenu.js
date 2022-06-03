@@ -18,7 +18,7 @@ export default function BurgerMenu() {
       >
         <div className="nav_container">
           <Navigation array={nav_header}></Navigation>
-          <Btn type="dark" text="get an invite"></Btn>
+          <Btn type="dark_link" text="get an invite"></Btn>
         </div>
       </BurgerContainer>
       <BurgerIcon

@@ -125,10 +125,17 @@ export const FooterContainer = styled.footer`
       align-self: flex-end;
       background-color: black;
       color: white;
+      padding: 0;
       .arrow,
       .arrow:before,
       .arrow:after {
         background-color: white;
+      }
+
+      @media screen and (max-width: 660px) {
+        width: 100%;
+        ${S.flexCenter()}
+        margin : 0 0 2rem;
       }
     }
   }
