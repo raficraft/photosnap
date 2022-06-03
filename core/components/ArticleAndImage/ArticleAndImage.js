@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import { ArticleImage } from "./ArticleAndImage_css";
+import useMediaQuery from "../../hooks/useMediaQuery/useMediaQuery";
 
 /**
  *
@@ -11,12 +12,14 @@ import { ArticleImage } from "./ArticleAndImage_css";
  */
 
 export default function ArticleAndImage({ img, style, content }) {
+  const isMobil = useMediaQuery("(max-width : 767px)");
+  const layout = isMobil ? "intrinsic" : "fixed";
   useEffect(() => {
     img ? console.log("yolo", img) : console.log("nothing");
   }, []);
   return (
     <ArticleImage>
-      <div className={`articleAndImage--${style}`}>
+      <div className={`articleAndImage articleAndImage--${style}`}>
         <div className="article_container">
           <article>
             <header>
@@ -28,8 +31,12 @@ export default function ArticleAndImage({ img, style, content }) {
         </div>
         <div className="image_container">
           <Image
+            placeholder="blur"
+            blurDataURL={img.blurDataURL}
+            objectFit="cover"
+            layout={layout}
             src={img.src}
-            alt="Picture of the author"
+            alt="PhotoSnap pictures"
             width={img.width}
             height={img.height}
           ></Image>

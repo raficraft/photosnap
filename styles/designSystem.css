@@ -250,6 +250,13 @@ label[data-active="true"] {
     text-align: center;
   }
 }
+@media screen and (max-width: 1280px) {
+  h1,
+  h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
 
 main {
   max-width: var(--container-width);
