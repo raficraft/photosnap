@@ -66,13 +66,15 @@ export const FooterContainer = styled.footer`
     }
 
     .social_icon {
-      gap: 1.5rem;
-      ${S.flex("row", "flex-start", "flex-start")}
-
-      .svgBox {
+      gap: 13px;
+      ${S.flex("row", "center", "flex-start")} .svgBox {
         ${S.size("1.5rem")};
         position: relative;
         cursor: pointer;
+
+        @media screen and (max-width: 660px) {
+          ${S.size("1.25rem")};
+        }
 
         .svg-icon {
           position: absolute;
