@@ -3,26 +3,25 @@ import React, { useEffect } from "react";
 /**
  *
  * @param {obj} img Object passed by the DispatchImageInChildren component
+ * @param {String} style
+ * @param {obj} content
  * @returns
  */
 
-export default function ArticleAndImage({ img }) {
+export default function ArticleAndImage({ img, style, content }) {
   useEffect(() => {
     img ? console.log("yolo", img) : console.log("nothing");
   }, []);
   return (
-    <div>
-      <h1>ElEMENT ENFANTS</h1>
-    </div>
+    <section>
+      <article>
+        <header>
+          <h1>{content.title}</h1>
+        </header>
+        <p>{content.text}</p>
+        <footer>{content.button}</footer>
+      </article>
+      <div></div>
+    </section>
   );
 }
-
-const articleANDimage_Data = {
-  home: [
-    {
-      title: "Create and share your photo stories.",
-      text: "Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.",
-      buttonText: "GET AN INVITE",
-    },
-  ],
-};
