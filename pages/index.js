@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import ArticleAndImage from "../core/components/ArticleAndImage/ArticleAndImage";
 import DipatchImagesInChildren from "../core/components/DispatchImagesInChildren/DipatchImagesInChildren";
 
 export default function Home() {
@@ -12,7 +13,11 @@ export default function Home() {
       </Head>
 
       <section>
-        <DipatchImagesInChildren dir={[]}></DipatchImagesInChildren>
+        <DipatchImagesInChildren dir={["home/desktop/"]}>
+          <ArticleAndImage style="black"></ArticleAndImage>
+          <ArticleAndImage style="white--invert"></ArticleAndImage>
+          <ArticleAndImage style="white"></ArticleAndImage>
+        </DipatchImagesInChildren>
       </section>
     </div>
   );
