@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import DipatchImagesInChildren from "../core/components/DispatchImagesInChildren/DipatchImagesInChildren";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       </Head>
 
       <section>
-        <h1>YOLO</h1>
+        <DipatchImagesInChildren dir={[]}></DipatchImagesInChildren>
       </section>
     </div>
   );
