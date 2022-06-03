@@ -30,12 +30,12 @@ describe("Footer component and items is rendered", () => {
   });
 
   test("Social should be rendered", () => {
-    const { getByTitle } = render(<Footer />);
+    const { getAllByTitle } = render(<Footer />);
 
-    expect(getByTitle(/facebook/i)).toBeInTheDocument();
-    expect(getByTitle(/youtube/i)).toBeInTheDocument();
-    expect(getByTitle(/instagram/i)).toBeInTheDocument();
-    expect(getByTitle(/pinterest/i)).toBeInTheDocument();
-    expect(getByTitle(/twitter/i)).toBeInTheDocument();
+    expect(getAllByTitle(/facebook/i)[0]).toBeInTheDocument();
+    expect(getAllByTitle(/youtube/i)[0]).toBeInTheDocument();
+    expect(getAllByTitle(/instagram/i)[0]).toBeInTheDocument();
+    expect(getAllByTitle(/pinterest/i)[0]).toBeInTheDocument();
+    expect(getAllByTitle(/twitter/i)[0]).toBeInTheDocument();
   });
 });

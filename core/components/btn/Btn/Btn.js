@@ -37,7 +37,9 @@ export default function Btn({ type, text, link = "/" }) {
       return (
         <a href={link} className="button button_arrow" role="button">
           <span className="button_content">{text}</span>
-          <span type="button" className="arrow"></span>
+          <span className="arrow_container">
+            <span type="button" className="arrow"></span>
+          </span>
         </a>
       );
   }

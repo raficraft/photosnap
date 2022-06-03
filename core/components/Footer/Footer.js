@@ -23,9 +23,9 @@ export default function Footer() {
       <section className="left">
         <header>
           <Logo className="logo"></Logo>
-          <Navigation array={nav_footer}></Navigation>
           <PhotosnapTitle color="white"></PhotosnapTitle>
         </header>
+        <Navigation array={nav_footer}></Navigation>
         <footer className="social_icon">
           <div className="svgBox">
             <IconFacebook className="svg-icon" color="white"></IconFacebook>
