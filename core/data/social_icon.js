@@ -1,6 +1,6 @@
 //Social network icon
 
-//Face Book
+//Facebook
 export function IconFacebook(props) {
   return (
     <svg

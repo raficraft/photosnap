@@ -257,6 +257,13 @@ label[data-active="true"] {
     line-height: 3rem;
   }
 }
+@media screen and (max-width: 599px) {
+  h1,
+  h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
 
 main {
   max-width: var(--container-width);

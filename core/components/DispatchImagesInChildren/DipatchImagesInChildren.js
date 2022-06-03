@@ -14,7 +14,6 @@ export default function DipatchImagesInChildren({ children, dir }) {
   });
 
   useEffect(() => {
-    !loading ? console.log("yolo", filesInfo) : console.log("wait");
     !loading && filesInfo.length !== children.length && setError(true);
   }, []);
 
