@@ -85,15 +85,17 @@ label[data-active="true"] {
 }
 
 .button {
+  height: 40px;
+  width: 158px;
   font-size: 12px;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  transition: 0.5s;
   border: none;
-  cursor: pointer;
-  font-weight: bold;
   display: block;
   text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 .button_dark {

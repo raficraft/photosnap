@@ -36,7 +36,7 @@ export default function Btn({ type, text, link = "/" }) {
     case "arrow_link":
       return (
         <a href={link} className="button button_arrow" role="button">
-          {text}
+          <span className="button_content">{text}</span>
           <span type="button" className="arrow"></span>
         </a>
       );

@@ -11,21 +11,19 @@ describe("Footer component and items is rendered", () => {
   });
 
   test("Navigation should be rendered", () => {
-    const { getByText } = render(
+    const { getByText, getAllByText } = render(
       <Footer>
         <Navigation array={nav_footer}></Navigation>
       </Footer>
     );
 
     expect(nav_footer.length).not.toBe(0);
-    expect(getByText(/\//i)).toBeInTheDocument();
-    expect(getByText(/stories/i)).toBeInTheDocument();
-    expect(getByText(/features/i)).toBeInTheDocument();
-    expect(getByText(/pricing/i)).toBeInTheDocument();
+    expect(getAllByText(/home/i)[0]).toBeInTheDocument();
+    expect(getAllByText(/home/i)[1]).toBeInTheDocument();
   });
 
   test("Items should be rendered", () => {
-    const { container, getByText } = render(<Footer />);
+    const { getByText } = render(<Footer />);
 
     expect(getByText(/get an invite/i)).toBeInTheDocument();
     expect(getByText(/copyright 2019/i)).toBeInTheDocument();
