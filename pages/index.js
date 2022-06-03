@@ -20,23 +20,23 @@ export default function Home() {
             content={{
               title: "Create and share your photo stories.",
               text: "Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.",
-              button: <Btn type="arrow" text="get an invite"></Btn>,
+              button: <Btn type="arrow_link" text="get an invite"></Btn>,
             }}
           ></ArticleAndImage>
           <ArticleAndImage
-            style="white--invert"
+            style="whiteReverse"
             content={{
               title: "BEAUTIFUL STORIES every time",
               text: "We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.",
-              button: <Btn type="arrow" text="view the stories"></Btn>,
+              button: <Btn type="arrow_link" text="view the stories"></Btn>,
             }}
           ></ArticleAndImage>
           <ArticleAndImage
             style="white"
             content={{
-              title: "Designe for everyone",
+              title: "Design for everyone",
               text: "Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it. ",
-              button: <Btn type="arrow" text="view the stories"></Btn>,
+              button: <Btn type="arrow_link" text="view the stories"></Btn>,
             }}
           ></ArticleAndImage>
         </DipatchImagesInChildren>

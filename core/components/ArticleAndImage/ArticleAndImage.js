@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import Image from "next/image";
+import { ArticleImage } from "./ArticleAndImage_css";
 
 /**
  *
@@ -13,15 +15,26 @@ export default function ArticleAndImage({ img, style, content }) {
     img ? console.log("yolo", img) : console.log("nothing");
   }, []);
   return (
-    <section>
-      <article>
-        <header>
-          <h1>{content.title}</h1>
-        </header>
-        <p>{content.text}</p>
-        <footer>{content.button}</footer>
-      </article>
-      <div></div>
-    </section>
+    <ArticleImage>
+      <div className={`articleAndImage--${style}`}>
+        <div className="article_container">
+          <article>
+            <header>
+              <h1>{content.title}</h1>
+            </header>
+            <p class="text">{content.text}</p>
+            <footer>{content.button}</footer>
+          </article>
+        </div>
+        <div className="image_container">
+          <Image
+            src={img.src}
+            alt="Picture of the author"
+            width={img.width}
+            height={img.height}
+          ></Image>
+        </div>
+      </div>
+    </ArticleImage>
   );
 }
