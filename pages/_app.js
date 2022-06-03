@@ -2,26 +2,33 @@ import "../styles/globals.css";
 import "../styles/designSystem.css";
 import Layout from "../core/components/Layout/Layout";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
-  const [appIsloaded, setAppIsloaded] = useState(false);
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    document.addEventListener("DOMContentLoaded", () => {
-      setAppIsloaded(true);
-    });
+    router.events.on("routeChangeError", (e) => setLoading(false));
+    router.events.on("routeChangeStart", (e) => setLoading(false));
+    router.events.on("routeChangeComplete", (e) => setLoading(true));
 
     return () => {
-      document.removeEventListener("DOMContentLoaded");
+      router.events.off("routeChangeError", (e) => setLoading(false));
+      router.events.off("routeChangeStart", (e) => setLoading(false));
+      router.events.off("routeChangeComplete", (e) => setLoading(true));
     };
-  }, [appIsloaded]);
-
-  appIsloaded ? (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  ) : (
-    <h1>Loading</h1>
+  }, [router.events]);
+  return (
+    <>
+      {loading ? (
+        <h1>Loading</h1>
+      ) : (
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      )}
+    </>
   );
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { nav_header } from "../../data/navigation_data";
 import useMediaQuery from "../../hooks/useMediaQuery/useMediaQuery";
 import Btn from "../btn/Btn/Btn";
@@ -9,6 +9,7 @@ import Navigation from "../Navigation/Navigation";
 
 export default function Layout({ children }) {
   const isMobil = useMediaQuery("(max-width : 767px)");
+
   return (
     <main>
       <Header>
