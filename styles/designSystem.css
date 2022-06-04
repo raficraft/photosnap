@@ -277,3 +277,36 @@ main {
   flex-direction: column;
   position: relative;
 }
+
+.main_section {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.main_section--features {
+  padding: 120px 165px;
+}
+
+@media screen and (max-width: 1439px) {
+  .main_section--features {
+    padding: 120px 65px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main_section--features {
+    padding: 80px 32px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .main_section--features {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+  }
+}
