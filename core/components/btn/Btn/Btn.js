@@ -1,5 +1,11 @@
 import React from "react";
 
+/**
+ *
+ * @param {*} param0
+ * @returns
+ */
+
 export default function Btn({ type, text, link = "/" }) {
   switch (type) {
     case "dark":
