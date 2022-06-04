@@ -2,7 +2,9 @@ import React from "react";
 
 /**
  *
- * @param {*} param0
+ * @param {String} type
+ * @param {String} text
+ * @param {String} link
  * @returns
  */
 

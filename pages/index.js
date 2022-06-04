@@ -41,6 +41,7 @@ export default function Home() {
           ></ArticleAndImage>
         </DipatchImagesInChildren>
       </section>
+      <section></section>
     </div>
   );
 }
