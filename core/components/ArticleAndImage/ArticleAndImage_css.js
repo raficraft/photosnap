@@ -84,38 +84,4 @@ export const ArticleImage = styled.section`
       ${S.flex("column-reverse", "center", "center")}
     }
   }
-
-  .articleAndImage--multi {
-    @media screen and (max-width: 800px) {
-      ${S.flex("row", "space-between", "center")}
-    }
-    @media screen and (max-width: 600px) {
-      ${S.flex("column-reverse", "space-between", "center")}
-    }
-    .article_container {
-      ${S.responsiveContainer("41.2%")}
-      @media screen and (max-width: 800px) {
-        ${S.responsiveContainer("64.3%")}
-      }
-      @media screen and (max-width: 600px) {
-        ${S.responsiveContainer("100%")}
-      }
-    }
-    .image_container {
-      ${S.responsiveContainer("57.8%")}
-      align-self: stretch;
-      overflow: hidden;
-      object-fit: cover;
-      ${S.flex("row", "center", "center")}
-      @media screen and (max-width: 800px) {
-        height: 100%;
-        ${S.responsiveContainer("35.7%")}
-      }
-
-      @media screen and (max-width: 600px) {
-        ${S.responsiveContainer("100%")}
-        height: 294px;
-      }
-    }
-  }
 `;
