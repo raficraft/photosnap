@@ -47,6 +47,11 @@ export default function Home() {
           ></ArticleAndImage>
         </DipatchImagesInChildren>
       </section>
+
+      <section>
+        <DipatchImagesInChildren></DipatchImagesInChildren>
+      </section>
+
       <section className="main_section main_section--features">
         <FeaturesCard
           content={{

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import useGetImages from "../../hooks/useGetImages/useGetImages";
 
-export default function DipatchImagesInChildren({ children, dir }) {
+export default function DipatchImagesInChildren({ children, dir = [] }) {
   const [filesInfo, loading] = useGetImages(dir);
   const [error, setError] = useState(false);
 
