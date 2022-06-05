@@ -22,15 +22,7 @@ export default function ArticleAndImage({ img, style = "", content = {} }) {
       <div className={`articleAndImage articleAndImage--${style}`}>
         <div className="article_container">
           <article>
-            <header>
-              {content.subTilte && <h1>{content.subTitle}</h1>}
-              {content.title && <h1>{content.title}</h1>}
-              {content.fullData && content.author && (
-                <h1>
-                  {content.title} {`by ${content.author}`}
-                </h1>
-              )}
-            </header>
+            <header>{content.title && <h1>{content.title}</h1>}</header>
             {content.text && <p className="text">{content.text}</p>}
             {content.button && <footer>{content.button}</footer>}
           </article>

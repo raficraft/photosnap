@@ -114,39 +114,8 @@ export const ArticleImage = styled.section`
 
       @media screen and (max-width: 600px) {
         ${S.responsiveContainer("100%")}
+        height: 294px;
       }
-    }
-  }
-
-  .articleAndImage--absolute {
-    background-color: transparent;
-    position: relative;
-    .article_container {
-      ${S.fullAbsolute()}
-      ${S.responsiveContainer("100%")}
-      padding : 0 165px;
-
-      color: black;
-      z-index: 300;
-      ${S.flex("row", "space-between", "center")}
-
-      article {
-        ${S.flex("row", "space-between", "center")}
-        ${S.responsiveContainer("100%")}
-        header {
-          ${S.responsiveContainer("400px")}
-        }
-      }
-      footer {
-        ${S.flexCenter()}
-      }
-
-      .button {
-        background-color: transparent;
-      }
-    }
-    .image_container {
-      ${S.responsiveContainer("100%")}
     }
   }
 `;

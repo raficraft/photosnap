@@ -1,7 +1,6 @@
 import Head from "next/head";
 import React from "react";
 import ArticleAndImage from "../../core/components/ArticleAndImage/ArticleAndImage";
-import Btn from "../../core/components/btn/Btn/Btn";
 import DipatchImagesInChildren from "../../core/components/DispatchImagesInChildren/DipatchImagesInChildren";
 import FeaturesCard from "../../core/components/FeaturesCard/FeaturesCard";
 import {
@@ -17,23 +16,8 @@ import useMediaQuery from "../../core/hooks/useMediaQuery/useMediaQuery";
 import imageDesktop from "../../public/assets/features/desktop/hero.jpg";
 import imageMobile from "../../public/assets/features/mobile/hero.jpg";
 import imageTablet from "../../public/assets/features/tablet/hero.jpg";
-import imageBeta from "../../public/assets/shared/bg-beta.jpg";
 
 export default function index() {
-  const isMobil = useMediaQuery("(max-width : 600px)");
-  const isTablet = useMediaQuery("(max-width : 768px)");
-
-  function getCurrentImage() {
-    console.log({ isMobil });
-    console.log({ isTablet });
-
-    return isMobil && !isTablet
-      ? imageMobile
-      : isTablet && !isMobil
-      ? imageTablet
-      : imageDesktop;
-  }
-
   return (
     <>
       <Head>
@@ -42,7 +26,7 @@ export default function index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section>
+      {/* <section>
         <ArticleAndImage
           img={getCurrentImage()}
           style="black articleAndImage--multi"
@@ -51,7 +35,7 @@ export default function index() {
             text: "We make sure all of our features are designed to be loved by every aspiring and even professional photograpers who wanted to share their stories.",
           }}
         ></ArticleAndImage>
-      </section>
+      </section> */}
 
       <section className="main_section main_section--features">
         <FeaturesCard
@@ -99,17 +83,6 @@ export default function index() {
           }}
         ></FeaturesCard>
       </section>
-
-      {/* <section>
-        <ArticleAndImage
-          img={imageBeta}
-          style="black articleAndImage--absolute"
-          content={{
-            title: "We’re in beta. Get your invite today!",
-            button: <Btn type="arrow_link" text="get and invite"></Btn>,
-          }}
-        ></ArticleAndImage>
-      </section> */}
     </>
   );
 }

@@ -307,16 +307,16 @@ main {
 @media screen and (max-width: 1280px) {
   .main_section--features {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 32px;
     padding: 80px 32px 0 32px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .main_section--features {
-    justify-content: center;
+    gap: 16px;
   }
 }
 
