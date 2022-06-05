@@ -23,7 +23,7 @@ export default function ArticleAndImage({ img, style, content }) {
             <header>
               <h1>{content.title}</h1>
             </header>
-            <p class="text">{content.text}</p>
+            <p className="text">{content.text}</p>
             <footer>{content.button}</footer>
           </article>
         </div>

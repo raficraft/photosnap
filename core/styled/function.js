@@ -26,6 +26,15 @@ export const S = {
     position: absolute;
   `,
 
+  fullAbsolute: () => css`
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  `,
+
   flexCenter: (direction, wrap = "nowrap") => css`
     display: flex;
     flex-direction: ${direction};

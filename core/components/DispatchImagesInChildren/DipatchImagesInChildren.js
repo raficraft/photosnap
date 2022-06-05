@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 
 import useGetImages from "../../hooks/useGetImages/useGetImages";
 
-export default function DipatchImagesInChildren({ children, dir = [] }) {
+export default function DipatchImagesInChildren({
+  children = [],
+  dir = [],
+  call = 0,
+}) {
   const [filesInfo, loading] = useGetImages(dir);
   const [error, setError] = useState(false);
 
@@ -14,6 +18,7 @@ export default function DipatchImagesInChildren({ children, dir = [] }) {
   });
 
   useEffect(() => {
+    !loading && console.log(`callby ${call}`, filesInfo, dir);
     !loading && filesInfo.length !== children.length && setError(true);
   }, []);
 

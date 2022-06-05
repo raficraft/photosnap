@@ -49,8 +49,8 @@ export default function Home() {
         </DipatchImagesInChildren>
       </section>
 
-      <section>
-        <DipatchImagesInChildren array={["home/stories/"]}>
+      <section className="main_section">
+        <DipatchImagesInChildren dir={["home/stories/"]} call="new">
           <StoriesItems
             content={{
               title: "The Mountain",
