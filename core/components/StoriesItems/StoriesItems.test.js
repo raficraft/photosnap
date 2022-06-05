@@ -18,9 +18,10 @@ describe("StoriesItems component and items is rendered", () => {
         content={{
           title: "The Mountains",
           author: "Jhon Appleseed",
-          button: <Btn type="Arrow_link" text="Read story"></Btn>,
         }}
-      />
+      >
+        <Btn type="Arrow_link" text="Read story"></Btn>,
+      </StoriesItems>
     );
 
     expect(getByText(/mountain/i)).toBeInTheDocument();

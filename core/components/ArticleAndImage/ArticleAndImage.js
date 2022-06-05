@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
 import Image from "next/image";
+import React from "react";
 import { ArticleImage } from "./ArticleAndImage_css";
 import useMediaQuery from "../../hooks/useMediaQuery/useMediaQuery";
 
@@ -14,9 +14,7 @@ import useMediaQuery from "../../hooks/useMediaQuery/useMediaQuery";
 export default function ArticleAndImage({ img, style, content }) {
   const isMobil = useMediaQuery("(max-width : 767px)");
   const layout = isMobil ? "intrinsic" : "fixed";
-  useEffect(() => {
-    img ? console.log("yolo", img) : console.log("nothing");
-  }, []);
+
   return (
     <ArticleImage>
       <div className={`articleAndImage articleAndImage--${style}`}>

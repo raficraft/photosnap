@@ -4,6 +4,7 @@ import ArticleAndImage from "../core/components/ArticleAndImage/ArticleAndImage"
 import Btn from "../core/components/btn/Btn/Btn";
 import DipatchImagesInChildren from "../core/components/DispatchImagesInChildren/DipatchImagesInChildren";
 import FeaturesCard from "../core/components/FeaturesCard/FeaturesCard";
+import StoriesItems from "../core/components/StoriesItems/StoriesItems";
 import {
   IconAvailableEmbed,
   IconNoLimit,
@@ -49,7 +50,32 @@ export default function Home() {
       </section>
 
       <section>
-        <DipatchImagesInChildren></DipatchImagesInChildren>
+        <DipatchImagesInChildren array={["home/stories/"]}>
+          <StoriesItems
+            content={{
+              title: "The Mountain",
+              author: "Jhon appleseed",
+            }}
+          ></StoriesItems>
+          <StoriesItems
+            content={{
+              title: "The Mountain",
+              author: "Jhon appleseed",
+            }}
+          ></StoriesItems>
+          <StoriesItems
+            content={{
+              title: "The Mountain",
+              author: "Jhon appleseed",
+            }}
+          ></StoriesItems>
+          <StoriesItems
+            content={{
+              title: "The Mountain",
+              author: "Jhon appleseed",
+            }}
+          ></StoriesItems>
+        </DipatchImagesInChildren>
       </section>
 
       <section className="main_section main_section--features">
