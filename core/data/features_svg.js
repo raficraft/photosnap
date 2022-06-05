@@ -147,7 +147,7 @@ export function IconAvailableEmbed(props) {
   );
 }
 
-export const CustomDomain = (props) => {
+export const IconCustomDomain = (props) => {
   return (
     <svg
       width="81"
@@ -190,7 +190,7 @@ export const CustomDomain = (props) => {
   );
 };
 
-export const boost = (props) => {
+export const IconBoost = (props) => {
   return (
     <svg
       width="72"

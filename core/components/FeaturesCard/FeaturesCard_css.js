@@ -4,11 +4,10 @@ import styled from "styled-components";
 export const FeaturesContainer = styled.section`
   ${S.flex("column", "flex-start", "flex-start")}
   ${S.responsiveContainer("350px")}
-
- 
+  padding : 0 0 80px 0;
 
   @media screen and (max-width: 1280px) {
-    ${S.responsiveContainer("340px")}
+    ${S.responsiveContainer("339px")}
   }
 
   .svgContainer {

@@ -27,7 +27,6 @@ export const S = {
   `,
 
   fullAbsolute: () => css`
-    content: " ";
     position: absolute;
     top: 0;
     bottom: 0;

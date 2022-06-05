@@ -273,7 +273,7 @@ main {
   flex: 1;
   min-height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
   position: relative;
 }
@@ -288,7 +288,14 @@ main {
 }
 
 .main_section--features {
-  padding: 120px 165px;
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 80px 165px 0 165px;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1439px) {
@@ -299,10 +306,17 @@ main {
 
 @media screen and (max-width: 1280px) {
   .main_section--features {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 80px;
+    gap: 16px;
+    padding: 80px 32px 0 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main_section--features {
+    justify-content: center;
   }
 }
 

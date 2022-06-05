@@ -13,13 +13,16 @@ export default function DipatchImagesInChildren({
   const childArray = React.Children.toArray(children);
   const newChildren = childArray.map((child, key) => {
     return React.cloneElement(child, {
-      img: filesInfo.length === children.length ? filesInfo[key] : [],
+      img: filesInfo ? filesInfo[key] : [],
     });
   });
 
   useEffect(() => {
+    console.log("toto", filesInfo);
+    console.log("toto", filesInfo.length);
+    console.log("toto", children.length);
     !loading && console.log(`callby ${call}`, filesInfo, dir);
-    !loading && filesInfo.length !== children.length && setError(true);
+    !loading && filesInfo.length !== newChildren.length && setError(true);
   }, []);
 
   return <>{!error && !loading ? newChildren : <h1>Loading...</h1>}</>;

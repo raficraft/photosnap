@@ -34,6 +34,8 @@ export default function useGetImages(directory) {
             const i = await import(`/public/assets/${folder}${f}`);
             filesArray.push(i.default);
           }
+          setFilesInfo(filesArray);
+          setLoading(false);
         } catch (error) {
           console.log(error);
         }
@@ -42,8 +44,6 @@ export default function useGetImages(directory) {
       for (const folder of directory) {
         await callApi(folder);
       }
-      setFilesInfo(filesArray);
-      setLoading(false);
     };
     fetchData();
   }, []);

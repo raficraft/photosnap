@@ -11,9 +11,11 @@ import useMediaQuery from "../../hooks/useMediaQuery/useMediaQuery";
  * @returns
  */
 
-export default function ArticleAndImage({ img, style, content }) {
+export default function ArticleAndImage({ img, style = "", content = {} }) {
   const isMobil = useMediaQuery("(max-width : 767px)");
   const layout = isMobil ? "intrinsic" : "fixed";
+
+  console.log(img);
 
   return (
     <ArticleImage>
@@ -21,10 +23,16 @@ export default function ArticleAndImage({ img, style, content }) {
         <div className="article_container">
           <article>
             <header>
-              <h1>{content.title}</h1>
+              {content.subTilte && <h1>{content.subTitle}</h1>}
+              {content.title && <h1>{content.title}</h1>}
+              {content.fullData && content.author && (
+                <h1>
+                  {content.title} {`by ${content.author}`}
+                </h1>
+              )}
             </header>
-            <p className="text">{content.text}</p>
-            <footer>{content.button}</footer>
+            {content.text && <p className="text">{content.text}</p>}
+            {content.button && <footer>{content.button}</footer>}
           </article>
         </div>
         <div className="image_container">
