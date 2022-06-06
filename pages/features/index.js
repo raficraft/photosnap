@@ -1,8 +1,8 @@
 import Head from "next/head";
 import React from "react";
-import ArticleAndImage from "../../core/components/ArticleAndImage/ArticleAndImage";
+import BannerFooter from "../../core/components/BannerFooter/BannerFooter";
 import BannerHero from "../../core/components/BannerHero/BannerHero";
-import DipatchImagesInChildren from "../../core/components/DispatchImagesInChildren/DipatchImagesInChildren";
+import Btn from "../../core/components/btn/Btn/Btn";
 import FeaturesCard from "../../core/components/FeaturesCard/FeaturesCard";
 import {
   IconAvailableEmbed,
@@ -77,6 +77,15 @@ export default function index() {
             text: "Easily drag and drop your image and get beautiful shots everytime. No over the top tooling to add friction to creating stories.",
           }}
         ></FeaturesCard>
+      </section>
+      <section>
+        <BannerFooter
+          dir={["shared/desktop/", "shared/tablet/", "shared/mobile/"]}
+          content={{
+            title: "We’re in beta. Get your invite today!",
+            button: <Btn type="arrow_link" text="get an invite"></Btn>,
+          }}
+        ></BannerFooter>
       </section>
     </>
   );

@@ -120,7 +120,6 @@ label[data-active="true"] {
 }
 
 .button_arrow {
-  background-color: white;
   transition: 0.5s;
   display: flex;
   flex-direction: row;

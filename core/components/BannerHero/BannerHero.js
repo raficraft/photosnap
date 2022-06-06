@@ -6,10 +6,10 @@ import { BannerHeroContainer } from "./BannerHero_css";
 export default function BannerHero({ dir = [], content = {} }) {
   const [filesInfo, loading] = useGetImages(dir);
 
-  function makeImage() {
+  function makeImages() {
     return filesInfo.map((img, key) => {
       return (
-        <div className={`image_container image_${key}`}>
+        <div className={`image_container image_${key}`} key={key}>
           <Image
             placeholder="blur"
             blurDataURL={img.blurDataURL}
@@ -35,7 +35,7 @@ export default function BannerHero({ dir = [], content = {} }) {
         <p className="text grey">{content.text}</p>
       </div>
 
-      {makeImage()}
+      {makeImages()}
     </BannerHeroContainer>
   ) : (
     <h1>Loading</h1>
