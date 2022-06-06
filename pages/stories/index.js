@@ -1,5 +1,7 @@
 import Head from "next/head";
 import React from "react";
+import BannerFooter from "../../core/components/BannerFooter/BannerFooter";
+import Btn from "../../core/components/btn/Btn/Btn";
 import DipatchImagesInChildren from "../../core/components/DispatchImagesInChildren/DipatchImagesInChildren";
 import StoriesItems from "../../core/components/StoriesItems/StoriesItems";
 
@@ -11,6 +13,25 @@ export default function index() {
         <meta name="description" content="Pricing page - Photosnap" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <section>
+        <BannerFooter
+          classCss="hero"
+          dir={[
+            "stories/hero/desktop/",
+            "stories/hero/tablet/",
+            "stories/hero/mobile/",
+          ]}
+          content={{
+            subtitle: "LAST MONTH’S FEATURED STORY",
+            title: "Hazy full moon of appalachia",
+            date: "March 2nd 2020",
+            author: "John Appleseed",
+            text: 'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
+            button: <Btn type="arrow_link" text="Read the story"></Btn>,
+          }}
+        ></BannerFooter>
+      </section>
       <section className="main_section">
         <DipatchImagesInChildren dir={["stories/galerie/"]}>
           <StoriesItems

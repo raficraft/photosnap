@@ -3,7 +3,11 @@ import Image from "next/image";
 import useGetImages from "../../hooks/useGetImages/useGetImages";
 import { BannerFooterContainer } from "./BannerFooter_css";
 
-export default function BannerFooter({ dir = [], content = {} }) {
+export default function BannerFooter({
+  dir = [],
+  content = {},
+  classCss = "hero",
+}) {
   const [filesInfo, loading] = useGetImages(dir);
 
   function makeImages() {
@@ -25,16 +29,41 @@ export default function BannerFooter({ dir = [], content = {} }) {
       );
     });
   }
+
+  function footerItem() {
+    return (
+      <>
+        {content.title && <header>{<h2>{content.title}</h2>}</header>}
+        {content.button && <aside>{content.button}</aside>}
+      </>
+    );
+  }
+
+  function HeroItem() {
+    return (
+      <article>
+        <header>
+          {content.subtitle && (
+            <h5 className="bold letter-spacing"> {content.subtitle}</h5>
+          )}
+          {content.title && <h1>{content.title}</h1>}
+          {content.date && (
+            <p className="text text-shadow">
+              {content.date} by {content.author}
+            </p>
+          )}
+        </header>
+        {content.text && <p className="text">{content.text}</p>}
+        {content.button && <footer>{content.button}</footer>}
+      </article>
+    );
+  }
   return !loading ? (
     <BannerFooterContainer>
       {makeImages()}
-      <div className="banner_content">
-        {content.title && (
-          <header>
-            <h2>{content.title}</h2>
-          </header>
-        )}
-        {content.button && <aside>{content.button}</aside>}
+      <div className={`banner_content banner_content--${classCss}`}>
+        {classCss === "footer" && footerItem()}
+        {classCss === "hero" && HeroItem()}
       </div>
     </BannerFooterContainer>
   ) : (

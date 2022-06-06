@@ -80,6 +80,7 @@ export default function index() {
       </section>
       <section>
         <BannerFooter
+          classCss="footer"
           dir={["shared/desktop/", "shared/tablet/", "shared/mobile/"]}
           content={{
             title: "We’re in beta. Get your invite today!",
