@@ -56,8 +56,8 @@ export const StoriesContainer = styled.section`
       color: white;
       padding: 40px;
       width: 100%;
-      header {
-        margin: 0 0 1rem 0;
+      h4 {
+        margin: 1rem 0 1rem 0;
       }
       footer {
         width: 100%;
