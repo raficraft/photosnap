@@ -1,10 +1,4 @@
-import React, {
-  useEffect,
-  useRef,
-  useState,
-  useLayoutEffect,
-  createRef,
-} from "react";
+import React from "react";
 import Image from "next/image";
 import useGetImages from "../../hooks/useGetImages/useGetImages";
 import { BannerHeroContainer } from "./BannerHero_css";
@@ -38,7 +32,7 @@ export default function BannerHero({ dir = [], content = {} }) {
         <header>
           <h1>{content.title}</h1>
         </header>
-        <p>{content.text}</p>
+        <p className="text grey">{content.text}</p>
       </div>
 
       {makeImage()}

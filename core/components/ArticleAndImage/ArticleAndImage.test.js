@@ -1,5 +1,7 @@
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
+import fileMock from "../../../__mocks__/fileMock";
+import "../../../__mocks__/matchMedia";
 import Btn from "../btn/Btn/Btn";
 import ArticleAndImage from "./ArticleAndImage";
 
@@ -7,6 +9,7 @@ describe("ArticleAndImage component and items is rendered", () => {
   test("ArticleAndImage should be rendered", () => {
     const { container } = render(
       <ArticleAndImage
+        img={fileMock}
         content={{
           title: "Create and share your photo stories.",
           text: "Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.",
@@ -20,6 +23,7 @@ describe("ArticleAndImage component and items is rendered", () => {
   test("ArticleAndImage items should be rendered", () => {
     const { getByText } = render(
       <ArticleAndImage
+        img={fileMock}
         content={{
           title: "Create and share your photo stories.",
           text: "Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.",

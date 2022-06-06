@@ -5,6 +5,8 @@ export const BannerHeroContainer = styled.section`
   background-color: black;
   color: white;
   ${S.flex("row", "space-between", "center", "nowrap")}
+  ${S.responsiveContainer("100%")}
+ 
 
   @media screen and (max-width: 599px) {
     ${S.flex("column-reverse", "space-between", "center")}
@@ -12,6 +14,19 @@ export const BannerHeroContainer = styled.section`
 
   .bannerHero_content {
     background-color: black;
+    padding: 173px 112px;
+    max-height: 490px;
+    h1 {
+      margin: 0 0 1rem 0;
+    }
+
+    @media screen and (max-width: 1100px) {
+      padding: 173px 54px;
+    }
+
+    @media screen and (max-width: 601px) {
+      padding: 72px 28px;
+    }
     @media screen and (min-width: 961px) {
       ${S.responsiveContainer("42%")}
     }
@@ -27,6 +42,11 @@ export const BannerHeroContainer = styled.section`
 
   .image_container {
     ${S.flex("row", "flex-end", "center", "nowrap")}
+    object-fit:cover;
+    span {
+      align-self: stretch;
+      flex: 1;
+    }
   }
 
   .image_0 {
@@ -38,6 +58,7 @@ export const BannerHeroContainer = styled.section`
   }
   .image_1 {
     ${S.responsiveContainer("35.5%")}
+
     @media screen and (min-width: 960px) {
       display: none;
     }
@@ -46,8 +67,6 @@ export const BannerHeroContainer = styled.section`
     }
   }
   .image_2 {
-    background-color: green;
-    ${S.flex("row", "center", "center")}
     ${S.responsiveContainer("100%")}
 
     span {

@@ -4,7 +4,7 @@ import Btn from "../btn/Btn/Btn";
 import { StoriesContainer } from "./Stories_css";
 
 export default function StoriesItems({ img, content }) {
-  const [parentHeight, setParentHeight] = useState(img.height + "px");
+  const [parentHeight, setParentHeight] = useState(0 + "px");
 
   const cardRef = useRef();
 

@@ -11,11 +11,14 @@ import useMediaQuery from "../../hooks/useMediaQuery/useMediaQuery";
  * @returns
  */
 
-export default function ArticleAndImage({ img, style = "", content = {} }) {
+export default function ArticleAndImage({
+  img = [""],
+  style = "",
+  content = {},
+  layout = "fixed",
+}) {
   const isMobil = useMediaQuery("(max-width : 767px)");
-  const layout = isMobil ? "intrinsic" : "fixed";
-
-  console.log(img);
+  layout = isMobil ? "intrinsic" : "fixed";
 
   return (
     <ArticleImage>

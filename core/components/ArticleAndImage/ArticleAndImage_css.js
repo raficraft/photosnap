@@ -41,6 +41,9 @@ export const ArticleImage = styled.section`
       ${S.responsiveContainer("56%")}
       padding : 5rem 1.5rem;
     }
+    @media screen and (max-width: 840px) {
+      ${S.responsiveContainer("64.5%")}
+    }
 
     @media screen and (max-width: 600px) {
       ${S.responsiveContainer("100%")}
@@ -50,6 +53,9 @@ export const ArticleImage = styled.section`
 
   article {
     ${S.responsiveContainer("63%")}
+    @media screen and (max-width: 840px) {
+      ${S.responsiveContainer("78%")}
+    }
     @media screen and (max-width: 767px) {
       ${S.responsiveContainer("100%")}
     }
@@ -66,16 +72,18 @@ export const ArticleImage = styled.section`
 
   .image_container {
     ${S.responsiveContainer("57.5%")}
-    align-self: stretch;
-    overflow: hidden;
     ${S.flex("row", "center", "center")}
+    background-color:green;
+    flex: 1;
 
     @media screen and (max-width: 1280px) {
       ${S.responsiveContainer("44%")}
     }
+    @media screen and (max-width: 840px) {
+      ${S.responsiveContainer("35.5%")}
+    }
     @media screen and (max-width: 767px) {
       ${S.responsiveContainer("100%")}
-      flex: 1;
     }
   }
 

@@ -1,12 +1,12 @@
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import { IconResponsive } from "../../data/features_svg";
-import FeaturesCard_css from "./FeaturesCard_css";
+import FeaturesCard from "./FeaturesCard";
 
-describe("ArticleAndImage component and items is rendered", () => {
-  test("ArticleAndImage should be rendered", () => {
+describe("FeaturesCard component and items is rendered", () => {
+  test("FeaturesCard should be rendered", () => {
     const { container } = render(
-      <FeaturesCard_css
+      <FeaturesCard
         content={{
           icon: <IconResponsive />,
           title: "100% responsive",
@@ -17,9 +17,9 @@ describe("ArticleAndImage component and items is rendered", () => {
     expect(container).toBeInTheDocument();
   });
 
-  test("ArticleAndImage items should be rendered", () => {
+  test("FeaturesCard items should be rendered", () => {
     const { getByText, getByTitle } = render(
-      <FeaturesCard_css
+      <FeaturesCard
         content={{
           icon: <IconResponsive />,
           title: "100% responsive",
