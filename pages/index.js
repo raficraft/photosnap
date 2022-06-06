@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import ArticleAndImage from "../core/components/ArticleAndImage/ArticleAndImage";
 import Btn from "../core/components/btn/Btn/Btn";
 import DipatchImagesInChildren from "../core/components/DispatchImagesInChildren/DipatchImagesInChildren";
@@ -50,7 +49,7 @@ export default function Home() {
       </section>
 
       <section className="main_section">
-        <DipatchImagesInChildren dir={["home/stories/"]} call="new">
+        <DipatchImagesInChildren dir={["home/stories/"]}>
           <StoriesItems
             content={{
               title: "The Mountain",
