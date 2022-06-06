@@ -15,12 +15,12 @@ describe("BannerFooter component and items is rendered", () => {
       <BannerFooter
         content={{
           title: "We’re in beta. Get your invite today!",
-          button: <Btn type="arrow_link" text="get and invite"></Btn>,
+          button: <Btn type="arrow_link" text="get an invite"></Btn>,
         }}
       />
     );
 
-    expect(getByText(/beta/i)).toBeInTheDocument();
-    expect(getByText(/invite/i)).toBeInTheDocument();
+    expect(getByText(/today/i)).toBeInTheDocument();
+    expect(getByText(/an/i)).toBeInTheDocument();
   });
 });
