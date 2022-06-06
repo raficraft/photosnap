@@ -5,31 +5,17 @@ import { StoriesContainer } from "./Stories_css";
 
 export default function StoriesItems({ img, content }) {
   const [parentHeight, setParentHeight] = useState(img.height + "px");
-  const [imageWidth, setImageWidth] = useState(img.width + "px");
 
-  const maskRef = useRef();
   const cardRef = useRef();
 
   function getHeight() {
     const currentCard = cardRef.current;
 
-    console.log("src", window.getComputedStyle(currentCard).width);
-    const size = window.getComputedStyle(currentCard).width;
-    const cardWidht = size.substring(0, size.length - 2);
+    const computedWidth = window.getComputedStyle(currentCard).width;
+    const cardWidht = computedWidth.substring(0, computedWidth.length - 2);
 
-    console.log("!!!!", cardWidht.substring(0, cardWidht.length - 2));
-
-    console.log({ img });
-
-    const currentImg = maskRef.current;
-    const firstChild = currentImg.children[0];
-    const imgHeight = window.getComputedStyle(firstChild).height;
     const ratio = img.width / img.height;
-
-    console.log("ratio", ratio);
-    console.log("container width", cardWidht);
     const newHeight = cardWidht / ratio;
-    console.log("new", newHeight);
     setParentHeight(newHeight);
   }
 
@@ -46,7 +32,7 @@ export default function StoriesItems({ img, content }) {
     <StoriesContainer>
       <div className="stories" style={{ height: parentHeight }} ref={cardRef}>
         <div className="stories_mask">
-          <div className="stories_img" ref={maskRef}>
+          <div className="stories_img">
             <Image
               placeholder="blur"
               blurDataURL={img.blurDataURL}
