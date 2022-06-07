@@ -98,11 +98,32 @@ label[data-active="true"] {
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+.text_left {
+  text-align: left;
+}
+
 .flexAround {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+
+.flexCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.ma_lg--y {
+  margin-top: 160px;
+  margin-bottom: 160px;
+}
+
+.ma_sm-x {
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .button {

@@ -2,7 +2,7 @@ import { S } from "../../../styled/function";
 import styled from "styled-components";
 
 export const PriceInteractContainer = styled.section`
-  padding: 120px 0;
+  padding: 120px 39px;
 
   header {
     ${S.flexCenter()}
@@ -13,5 +13,8 @@ export const PriceInteractContainer = styled.section`
     ${S.flex("row", "center", "center")}
     align-items: center;
     gap: 30px;
+    @media screen and (max-width: 1080px) {
+      ${S.flex("column", "center", "center")}
+    }
   }
 `;
