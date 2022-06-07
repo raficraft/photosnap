@@ -17,14 +17,19 @@ describe("PriceCard component and items is rendered", () => {
       <PriceCard
         theme="black"
         content={{
-          title: "basic",
-          text: "",
-          price: "",
-          button: <Btn />,
+          title: "pro",
+          text: "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
+          price: "19.00",
+          duration: "per month",
+          button: <Btn type="light" text="pick plan" />,
         }}
       />
     );
 
-    expect(getByText(/basic/i)).toBeInTheDocument();
+    expect(getByText(/pro/i)).toBeInTheDocument();
+    expect(getByText(/platform/i)).toBeInTheDocument();
+    expect(getByText(/19/i)).toBeInTheDocument();
+    expect(getByText(/month/i)).toBeInTheDocument();
+    expect(getByText(/plan/i)).toBeInTheDocument();
   });
 });

@@ -3,6 +3,7 @@ import React from "react";
 import BannerFooter from "../../core/components/BannerFooter/BannerFooter";
 import BannerHero from "../../core/components/BannerHero/BannerHero";
 import Btn from "../../core/components/btn/Btn/Btn";
+import PriceInteract from "../../core/components/composed/PriceInteract/PriceInteract";
 
 export default function index() {
   return (
@@ -21,6 +22,8 @@ export default function index() {
           }}
         ></BannerHero>
       </section>
+      <PriceInteract></PriceInteract>
+
       <section>
         <BannerFooter
           classCss="footer"
