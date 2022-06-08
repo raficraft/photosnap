@@ -66,6 +66,7 @@ export const PriceCardContainer = styled.div`
     }
     @media screen and (max-width: 600px) {
       width: 100%;
+      ${S.size("100%", "407px")}
     }
   }
 

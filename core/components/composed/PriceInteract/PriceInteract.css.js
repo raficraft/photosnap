@@ -9,7 +9,7 @@ export const PriceInteractContainer = styled.section`
   }
 
   @media screen and (max-width: 600px) {
-    padding: 64px 39px;
+    padding: 64px 29px;
   }
 
   header {

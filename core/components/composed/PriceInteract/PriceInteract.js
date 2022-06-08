@@ -14,10 +14,6 @@ export default function PriceInteract() {
     setMultiple(val);
   }
 
-  // useEffect(() => {
-  //   console.log("render", multiple);
-  // }, [multiple]);
-
   return (
     <PriceInteractContainer>
       <header>
