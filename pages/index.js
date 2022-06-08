@@ -20,6 +20,7 @@ export default function Home() {
           name="description"
           content="FrontEnd Mentor Challenge [4] - home page"
         />
+        <title>FrontEnd Mentor Challenge [4] - Home page</title>
         <link rel="icon" href="/favicon.ico" />
         {/* Social Network Card */}
         <meta

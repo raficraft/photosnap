@@ -22,6 +22,7 @@ export default function Index() {
           name="description"
           content="FrontEnd Mentor Challenge [4] - Features page"
         />
+        <title>FrontEnd Mentor Challenge [4] - Features page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
