@@ -86,7 +86,7 @@ export const BannerHeroContainer = styled.section`
     width: 6px;
     height: 144px;
     left: 0;
-    top: ${S.centerAbsolute("304px")};
+    top: ${S.centerAbsolute("144px")};
     background: linear-gradient(
       26.57deg,
       #ffc593 0%,
