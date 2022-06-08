@@ -31,7 +31,7 @@ export const Checkbox = forwardRef(({ external }, ref) => {
         type="checkbox"
         id="check"
         ref={checkBoxRef}
-        defaultChecked={isChecked}
+        defaultChecked={!isChecked}
         onChange={() => {
           setIsChecked(!isChecked);
           external();
