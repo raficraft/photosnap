@@ -10,7 +10,10 @@ export default function Index() {
     <>
       <Head>
         <title>Create Next App</title>
-        <meta name="description" content="Pricing page - Photosnap" />
+        <meta
+          name="description"
+          content="FrontEnd Mentor Challenge [4] - Stories page"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
