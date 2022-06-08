@@ -29,7 +29,7 @@ export default function Home() {
         />
         <meta
           property="og:description"
-          content="Challenge de niveau avancé [4] du site frontend mentor.  Ce projet est un site marketing pour une application de partage de photos."
+          content="Challenge de niveau avancé [4] du site frontend mentor. Ce projet est un site marketing pour une application de partage de photos."
         />
         <meta property="og:type" content="website" />
         <meta
