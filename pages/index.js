@@ -45,7 +45,7 @@ export default function Home() {
         <meta property="og:tag" content="Styled-components" />
         <meta
           property="og:image"
-          content="/./public/assets/socialCard/socialCard.jpg"
+          content="../public/assets/socialCard/socialCard.jpg"
         />
 
         {/* Twitter Card */}
@@ -64,7 +64,7 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="/./public/assets/socialCard/socialCard.jpg"
+          content="../public/assets/socialCard/socialCard.jpg"
         />
       </Head>
 
