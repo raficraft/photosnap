@@ -7,16 +7,14 @@ const border = "20px";
 export const GradientLoaderContainer = styled.div`
   position: relative;
   ${S.size("300px")};
-  background-color: red;
   content: " ";
   position: absolute;
-  top: ${S.centerAbsolute("50%")};
+  top: ${S.centerAbsolute("300px")};
   left: ${S.centerAbsolute("300px")};
   margin: auto auto;
   border-radius: 50%;
   background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
   animation: ${anim.rotateGradientLoader} 1s linear infinite;
-  ${S.flexCenter()}
 
   span {
     position: absolute;
@@ -54,15 +52,15 @@ export const GradientLoaderContainer = styled.div`
   }
 `;
 
-export const FooterLoader = styled.footer`
-  position: absolute;
-  ${S.size("100%")}
-  ${S.flexCenter()};
-  align-items: center;
+export const WrapperLoader = styled.footer`
+  height: 100vh;
+  position: relative;
+  ${S.flexCenter()}
   a {
-    position: absolute;
-    top: ${S.centerAbsolute("450px")};
-    svg {
+    z-index: 100;
+    opacity: 0.9;
+    gap: 1rem;
+    .logo {
       margin: 0 0.5rem 0 0;
     }
   }

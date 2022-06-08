@@ -46,7 +46,7 @@ export default function useGetImages(directory) {
         setFilesInfo(filesArray);
 
         setLoading(false);
-      }, 200000000);
+      }, 600);
     };
     fetchData();
   }, []);
