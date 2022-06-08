@@ -3,8 +3,9 @@ import Image from "next/image";
 import useGetImages from "../../hooks/useGetImages/useGetImages";
 import { BannerHeroContainer } from "./BannerHero_css";
 import Loader from "../Loader/Loader";
+import GradientLoader from "../Loader/GradientLoader/GradientLoader";
 
-export default function BannerHero({ dir = [], content = {} }) {
+export default function BannerHero({ dir = [], content = {}, height = false }) {
   const [filesInfo, loading] = useGetImages(dir);
 
   function makeImages() {
@@ -40,6 +41,6 @@ export default function BannerHero({ dir = [], content = {} }) {
       {makeImages()}
     </BannerHeroContainer>
   ) : (
-    <Loader />
+    height && <GradientLoader height={height} />
   );
 }

@@ -34,6 +34,7 @@ export default function Index() {
             text: 'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
             button: <Btn type="arrow_link" text="Read the story"></Btn>,
           }}
+          height="647px"
         ></BannerFooter>
       </section>
       <section className="main_section">

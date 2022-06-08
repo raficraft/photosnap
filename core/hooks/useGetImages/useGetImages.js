@@ -42,9 +42,11 @@ export default function useGetImages(directory) {
       for (const folder of directory) {
         await callApi(folder);
       }
+      setTimeout(() => {
+        setFilesInfo(filesArray);
 
-      setFilesInfo(filesArray);
-      setLoading(false);
+        setLoading(false);
+      }, 200000000);
     };
     fetchData();
   }, []);

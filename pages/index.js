@@ -63,7 +63,7 @@ export default function Home() {
       </Head>
 
       <section>
-        <DipatchImagesInChildren dir={["home/desktop/"]}>
+        <DipatchImagesInChildren dir={["home/desktop/"]} height="650px">
           <ArticleAndImage
             style="black"
             content={{

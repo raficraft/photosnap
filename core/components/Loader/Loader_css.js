@@ -3,8 +3,6 @@ import { anim } from "../../styled/animation";
 import styled from "styled-components";
 
 export const LoaderContainer = styled.div`
-  position: relative;
-  ${S.size("200px")};
   content: " ";
   margin: 120px auto;
   span {

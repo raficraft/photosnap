@@ -33,6 +33,7 @@ export default function Index() {
             title: "features",
             text: "We make sure all of our features are designed to be loved by every aspiring and even professional photograpers who wanted to share their stories.",
           }}
+          height="490px"
         ></BannerHero>
       </section>
 

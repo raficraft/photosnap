@@ -3,11 +3,13 @@ import Image from "next/image";
 import useGetImages from "../../hooks/useGetImages/useGetImages";
 import { BannerFooterContainer } from "./BannerFooter_css";
 import Loader from "../Loader/Loader";
+import GradientLoader from "../Loader/GradientLoader/GradientLoader";
 
 export default function BannerFooter({
   dir = [],
   content = {},
   classCss = "hero",
+  height = false,
 }) {
   const [filesInfo, loading] = useGetImages(dir);
 
@@ -69,6 +71,6 @@ export default function BannerFooter({
       </div>
     </BannerFooterContainer>
   ) : (
-    <Loader></Loader>
+    height && <GradientLoader height={height} />
   );
 }

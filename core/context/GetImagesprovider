@@ -1,0 +1,28 @@
+import React, { createContext, useState, useRef, useEffect } from "react";
+
+export const GetImagesContext = createContext();
+
+export default function GetImagesProvider({ children }) {
+  const refSub = useRef(false);
+  const [isSub, setIsSub] = useState(false);
+
+  const handleClickOutside = (event) => {
+    if (refSub.current && !refSub.current.contains(event.target)) {
+      setIsSub(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside, true);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside, true);
+    };
+  }, [refSub]);
+
+  return (
+    <GetImagesContext.Provider value={{ isSub, setIsSub, refSub }}>
+      {children}
+    </GetImagesContext.Provider>
+  );
+}

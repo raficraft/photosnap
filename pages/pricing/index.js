@@ -28,6 +28,7 @@ export default function Index() {
             title: "pricing",
             text: "Create a your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos.",
           }}
+          height="490px"
         ></BannerHero>
       </section>
       <PriceInteract></PriceInteract>
