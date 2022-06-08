@@ -9,7 +9,6 @@ export default (req, res) => {
     const validFiles = [];
 
     for (const file of filenames) {
-      console.log(file);
       if (file.match(/.(jpg|jpeg|png|gif|svg)$/i)) {
         validFiles.push(file);
       }

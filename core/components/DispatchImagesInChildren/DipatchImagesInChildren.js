@@ -19,10 +19,6 @@ export default function DipatchImagesInChildren({
   });
 
   useEffect(() => {
-    console.log("toto", filesInfo);
-    console.log("toto", filesInfo.length);
-    console.log("toto", children.length);
-    !loading && console.log(`callby ${call}`, filesInfo, dir);
     !loading && filesInfo.length !== newChildren.length && setError(true);
   }, []);
 
