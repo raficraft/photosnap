@@ -73,7 +73,6 @@ export const ArticleImage = styled.section`
   .image_container {
     ${S.responsiveContainer("57.5%")}
     ${S.flex("row", "center", "center")}
-    background-color:green;
     flex: 1;
 
     @media screen and (max-width: 1280px) {

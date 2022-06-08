@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import useGetImages from "../../hooks/useGetImages/useGetImages";
+import Loader from "../Loader/Loader";
 
 export default function DipatchImagesInChildren({
   children = [],
@@ -25,5 +26,5 @@ export default function DipatchImagesInChildren({
     !loading && filesInfo.length !== newChildren.length && setError(true);
   }, []);
 
-  return <>{!error && !loading ? newChildren : <h1>Loading...</h1>}</>;
+  return <>{!error && !loading ? newChildren : <Loader></Loader>}</>;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import useGetImages from "../../hooks/useGetImages/useGetImages";
 import { BannerHeroContainer } from "./BannerHero_css";
+import Loader from "../Loader/Loader";
 
 export default function BannerHero({ dir = [], content = {} }) {
   const [filesInfo, loading] = useGetImages(dir);
@@ -38,6 +39,6 @@ export default function BannerHero({ dir = [], content = {} }) {
       {makeImages()}
     </BannerHeroContainer>
   ) : (
-    <h1>Loading</h1>
+    <Loader />
   );
 }

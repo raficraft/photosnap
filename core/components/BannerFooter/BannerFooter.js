@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import useGetImages from "../../hooks/useGetImages/useGetImages";
 import { BannerFooterContainer } from "./BannerFooter_css";
+import Loader from "../Loader/Loader";
 
 export default function BannerFooter({
   dir = [],
@@ -67,6 +68,6 @@ export default function BannerFooter({
       </div>
     </BannerFooterContainer>
   ) : (
-    <h1>Loading</h1>
+    <Loader></Loader>
   );
 }
