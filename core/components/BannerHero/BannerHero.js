@@ -30,6 +30,7 @@ export default function BannerHero({ dir = [], content = {} }) {
   return !loading ? (
     <BannerHeroContainer>
       <div className="bannerHero_content">
+        <span className="emphasisGradient"></span>
         <header>
           <h1>{content.title}</h1>
         </header>

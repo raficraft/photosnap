@@ -17,6 +17,7 @@ export const PriceCardContainer = styled.div`
     width: 100%;
   }
   .cardContainer {
+    position: relative;
     ${S.size("100%", "407px")};
     ${S.flexCenter("column")};
     padding: 56px 40px 40px 40px;
@@ -96,5 +97,20 @@ export const PriceCardContainer = styled.div`
         text-align: right;
       }
     }
+  }
+
+  .emphasisGradient {
+    content: "";
+    position: absolute;
+    height: 6px;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: linear-gradient(
+      26.57deg,
+      #ffc593 0%,
+      #bc7198 43.29%,
+      #5a77ff 83.33%
+    );
   }
 `;

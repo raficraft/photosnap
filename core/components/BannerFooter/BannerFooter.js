@@ -62,6 +62,7 @@ export default function BannerFooter({
   return !loading ? (
     <BannerFooterContainer>
       {makeImages()}
+      <span className="emphasisGradient"></span>
       <div className={`banner_content banner_content--${classCss}`}>
         {classCss === "footer" && footerItem()}
         {classCss === "hero" && HeroItem()}

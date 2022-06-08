@@ -34,6 +34,7 @@ export const ArticleImage = styled.section`
   }
 
   .article_container {
+    position: relative;
     ${S.responsiveContainer("42.5%")}
     ${S.flex("column", "center", "center")}
 
@@ -89,6 +90,34 @@ export const ArticleImage = styled.section`
   @media screen and (max-width: 767px) {
     .articleAndImage {
       ${S.flex("column-reverse", "center", "center")}
+    }
+  }
+
+  .emphasisGradient {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 304px;
+    left: 0;
+    top: ${S.centerAbsolute("304px")};
+    background: linear-gradient(
+      26.57deg,
+      #ffc593 0%,
+      #bc7198 43.29%,
+      #5a77ff 83.33%
+    );
+
+    @media screen and (max-width: 767px) {
+      width: 128px;
+      height: 6px;
+      top: 0;
+      left: 30px;
+      background: linear-gradient(
+        4.57deg,
+        #ffc593 0%,
+        #bc7198 43.29%,
+        #5a77ff 83.33%
+      );
     }
   }
 `;

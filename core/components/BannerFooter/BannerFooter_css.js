@@ -43,7 +43,7 @@ export const BannerFooterContainer = styled.section`
   }
 
   @media screen and (max-width: 500px) {
-    .banner_content {
+    .banner_content--hero {
       position: relative;
       background-color: black;
       padding: 48px 29px;
@@ -96,6 +96,34 @@ export const BannerFooterContainer = styled.section`
   .image_2 {
     @media screen and (min-width: 376px) {
       display: none;
+    }
+  }
+
+  .emphasisGradient {
+    content: "";
+    position: absolute;
+    width: 6px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(
+      26.57deg,
+      #ffc593 0%,
+      #bc7198 43.29%,
+      #5a77ff 83.33%
+    );
+
+    @media screen and (max-width: 500px) {
+      width: 128px;
+      height: 6px;
+      top: 0;
+      left: 30px;
+      background: linear-gradient(
+        4.57deg,
+        #ffc593 0%,
+        #bc7198 43.29%,
+        #5a77ff 83.33%
+      );
     }
   }
 `;

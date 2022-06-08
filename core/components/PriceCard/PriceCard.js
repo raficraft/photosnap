@@ -5,6 +5,7 @@ export default function PriceCard({ theme, content, multiple = 1 }) {
   return (
     <PriceCardContainer>
       <div className={`cardContainer ${theme}`}>
+        {content.emphasisGradient && <span className="emphasisGradient"></span>}
         <div className="card_content">
           <header>
             <h3>{content.title}</h3>

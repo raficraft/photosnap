@@ -12,7 +12,7 @@ body,
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-color: rgb(212, 212, 212);
+  background-color: #ebebeb;
 }
 
 a {

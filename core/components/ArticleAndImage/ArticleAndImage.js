@@ -24,6 +24,9 @@ export default function ArticleAndImage({
     <ArticleImage>
       <div className={`articleAndImage articleAndImage--${style}`}>
         <div className="article_container">
+          {content.emphasisGradient && (
+            <span className="emphasisGradient"></span>
+          )}
           <article>
             <header>{content.title && <h1>{content.title}</h1>}</header>
             {content.text && <p className="text">{content.text}</p>}

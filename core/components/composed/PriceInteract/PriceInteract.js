@@ -34,6 +34,7 @@ export default function PriceInteract() {
             price: "19.00",
             duration: "per month",
             button: <Btn type="dark" text="pick a plan" />,
+            emphasisGradient: false,
           }}
         ></PriceCard>
         <PriceCard
@@ -45,6 +46,7 @@ export default function PriceInteract() {
             price: "39.00",
             duration: "per month",
             button: <Btn type="light" text="pick a plan" />,
+            emphasisGradient: true,
           }}
         ></PriceCard>
         <PriceCard
@@ -56,6 +58,7 @@ export default function PriceInteract() {
             price: "99.00",
             duration: "per month",
             button: <Btn type="dark" text="pick a plan" />,
+            emphasisGradient: false,
           }}
         ></PriceCard>
       </div>
