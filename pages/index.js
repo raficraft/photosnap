@@ -43,10 +43,7 @@ export default function Home() {
         <meta property="og:tag" content="TDD" />
         <meta property="og:tag" content="Testing Library" />
         <meta property="og:tag" content="Styled-components" />
-        <meta
-          property="og:image"
-          content="../public/assets/socialCard/socialCard.jpg"
-        />
+        <meta property="og:image" content="/assets/socialCard/socialCard.jpg" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -62,10 +59,7 @@ export default function Home() {
           name="twitter:url"
           content="https://photosnap-r-parodi.vercel.app/"
         />
-        <meta
-          name="twitter:image"
-          content="../public/assets/socialCard/socialCard.jpg"
-        />
+        <meta name="twitter:image" content="assets/socialCard/socialCard.jpg" />
       </Head>
 
       <section>
