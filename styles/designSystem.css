@@ -126,6 +126,10 @@ label[data-active="true"] {
   margin-right: 40px;
 }
 
+.table_container {
+  margin: 160px 40px;
+}
+
 .button {
   min-height: 40px;
   font-size: 12px;
@@ -353,6 +357,12 @@ main {
 @media screen and (max-width: 600px) {
   .main_section--features {
     padding: 80px 32px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .table_container {
+    margin: 0px 40px;
   }
 }
 

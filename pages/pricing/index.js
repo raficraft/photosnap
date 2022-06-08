@@ -5,8 +5,11 @@ import BannerHero from "../../core/components/BannerHero/BannerHero";
 import Btn from "../../core/components/btn/Btn/Btn";
 import PriceInteract from "../../core/components/composed/PriceInteract/PriceInteract";
 import Table from "../../core/components/Table/Table";
+import TableMobile from "../../core/components/TableMobile/TableMobile";
+import useMediaQuery from "../../core/hooks/useMediaQuery/useMediaQuery";
 
 export default function index() {
+  const isMobil = useMediaQuery("(max-width : 720px)");
   return (
     <>
       <Head>
@@ -24,8 +27,9 @@ export default function index() {
         ></BannerHero>
       </section>
       <PriceInteract></PriceInteract>
-      <section className="flexCenter ma_lg--y ma_sm-x">
-        <Table></Table>
+      <section className="flexCenter table_container">
+        {isMobil && <TableMobile></TableMobile>}
+        {!isMobil && <Table></Table>}
       </section>
       <section>
         <BannerFooter

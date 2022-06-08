@@ -2,6 +2,10 @@ import { S } from "../../styled/function";
 import styled from "styled-components";
 
 export const TableContainer = styled.table`
+  .toto {
+    background-color: red;
+  }
+
   margin: auto auto;
   font-weight: bold;
   ${S.responsiveContainer("731px")}
