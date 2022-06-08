@@ -21,22 +21,22 @@ export default function Home() {
         {/* Social Network Card */}
         <meta
           property="og:title"
-          content="Front-end mentor challenge - Space tourism"
+          content="Front-end mentor challenge - Photosnap"
         />
         <meta
           property="og:description"
-          content="Challenge de niveau intermediare [3] du site frontend mentor. Ce projet est une collaboration amusante entre Scrimba et Kevin Powell!"
+          content="Challenge de niveau avancé [4] du site frontend mentor.  Ce projet est un site marketing pour une application de partage de photos."
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://space-tourism-r-parodi.vercel.app/"
+          content="https://photosnap-r-parodi.vercel.app/"
         />
         <meta property="og:locale" content="fr_fr" />
         <meta property="og:tag" content="Github" />
-        <meta property="og:tag" content="React" />
-        <meta property="og:tag" content="React-router" />
-        <meta property="og:tag" content="Testing Library" />
+        <meta property="og:tag" content="Next" />
+        <meta property="og:tag" content="Responsive" />
+        <meta property="og:tag" content="TDD" />
         <meta property="og:tag" content="Testing Library" />
         <meta property="og:tag" content="Styled-components" />
         <meta
@@ -48,15 +48,15 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Front-end mentor challenge - Space tourism"
+          content="Front-end mentor challenge - Photosnap"
         />
         <meta
           name="twitter:description"
-          content="Challenge de niveau intermediare [3] du site frontend mentor. Ce projet est une collaboration amusante entre Scrimba et Kevin Powell!"
+          content="Challenge de niveau avancé [4] du site frontend mentor.  Ce projet est un site marketing pour une application de partage de photos."
         />
         <meta
           name="twitter:url"
-          content="https://space-tourism-r-parodi.vercel.app/"
+          content="https://photosnap-r-parodi.vercel.app/"
         />
         <meta
           name="twitter:image"
