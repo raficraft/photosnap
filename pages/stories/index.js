@@ -5,7 +5,7 @@ import Btn from "../../core/components/btn/Btn/Btn";
 import DipatchImagesInChildren from "../../core/components/DispatchImagesInChildren/DipatchImagesInChildren";
 import StoriesItems from "../../core/components/StoriesItems/StoriesItems";
 
-export default function index() {
+export default function Index() {
   return (
     <>
       <Head>

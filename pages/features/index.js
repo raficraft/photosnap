@@ -13,7 +13,7 @@ import {
   IconResponsive,
 } from "../../core/data/features_svg";
 
-export default function index() {
+export default function Index() {
   return (
     <>
       <Head>

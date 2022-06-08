@@ -8,7 +8,7 @@ import Table from "../../core/components/Table/Table";
 import TableMobile from "../../core/components/TableMobile/TableMobile";
 import useMediaQuery from "../../core/hooks/useMediaQuery/useMediaQuery";
 
-export default function index() {
+export default function Index() {
   const isMobil = useMediaQuery("(max-width : 720px)");
   return (
     <>
