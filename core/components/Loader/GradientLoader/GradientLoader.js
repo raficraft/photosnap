@@ -1,6 +1,5 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { Logo, PhotosnapTitle } from "../../../assets/svg/Logo/Logo";
-import Portal from "../../Portal/Portal";
 import {
   FooterLoader,
   GradientLoaderContainer,

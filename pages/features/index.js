@@ -12,6 +12,7 @@ import {
   IconNoLimit,
   IconResponsive,
 } from "../../core/data/features_svg";
+import { useRouter } from "next/router";
 
 export default function Index() {
   return (

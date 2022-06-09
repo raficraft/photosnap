@@ -43,6 +43,29 @@ h5,
   letter-spacing: 2px;
   font-weight: bold;
   text-transform: uppercase;
+  position: relative;
+  z-index: 10;
+}
+
+.nav_link[data-active="true"]:after {
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  bottom: -10px;
+  left: 0px;
+  background: linear-gradient(
+    26.57deg,
+    #ffc593 0%,
+    #bc7198 43.29%,
+    #5a77ff 83.33%
+  );
+  z-index: 100;
+  content: " ";
+  border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
+}
+
+.nav_link[data-active="true"] {
+  color: rgb(146, 146, 146) !important;
 }
 
 h1,
